@@ -8,11 +8,10 @@
 #include "Util/NonMoveable.h"
 #include "Util/FPSCounter.h"
 
-/**
-    Main controlling class of the game.
-    Handles state switches and the main loop, as well
-    as counting the FPS
-*/
+
+//    Main controlling class of the game.
+//    Handles state switches and the main loop, as well
+//    as counting the FPS
 class Game : public NonCopyable, public NonMovable
 {
     public:

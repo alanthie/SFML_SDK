@@ -8,9 +8,8 @@
 #include <SFML/Graphics.hpp>
 #include <memory>
 
-/**
-    Game state for the main part of the game
-*/
+//    Game state for the main part of the game
+//
 class StatePlaying : public StateBase
 {
     public:

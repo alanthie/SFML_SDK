@@ -6,7 +6,7 @@ Animation::Animation(unsigned frameWidth, unsigned frameHeight)
 , FRAME_HEIGHT (frameHeight)
 { }
 
-//Adds a frame...
+// Adds a frame...
 void Animation::addFrame(unsigned index, sf::Time delay)
 {
     sf::IntRect bounds;
@@ -18,7 +18,7 @@ void Animation::addFrame(unsigned index, sf::Time delay)
     m_frames.emplace_back(bounds, delay);
 }
 
-//Returns the current/active frame of the animation
+// Returns the current/active frame of the animation
 const sf::IntRect& Animation::getFrame()
 {
     if (m_timer.getElapsedTime() >= m_frames[m_framePointer].delay) {

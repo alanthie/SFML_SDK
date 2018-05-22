@@ -1,5 +1,4 @@
 #include "Textbox.h"
-
 #include <iostream>
 
 namespace gui {
@@ -25,10 +24,12 @@ void TextBox::handleEvent(sf::Event e, const sf::RenderWindow& window)
 
 void TextBox::render(sf::RenderTarget& renderer)
 {
-    if (!m_isActive) {
+    if (!m_isActive)
+    {
         m_rect.setFillColor({52, 152, 219});
     }
-    else {
+    else 
+    {
         m_rect.setFillColor({82, 132, 239});
     }
     renderer.draw(m_rect);
@@ -87,7 +88,7 @@ void TextBox::handleTextInput (sf::Event e)
     case sf::Event::TextEntered:
         if (m_isActive)
         {
-            //Get the key that was entered
+            // Get the key that was entered
             unsigned char keyCode = e.text.unicode;
 
             if (isValidCharacter(keyCode)) 
@@ -99,7 +100,7 @@ void TextBox::handleTextInput (sf::Event e)
             }
             else if (isBackspace(keyCode)) 
             {
-                //prevents popping back an empty string
+                // prevents popping back an empty string
                 if (m_pModString->length() > 0)
                     m_pModString->pop_back();
             }

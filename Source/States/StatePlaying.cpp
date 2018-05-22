@@ -6,8 +6,6 @@
 
 #include <iostream>
 
-std::string test;
-
 StatePlaying::StatePlaying(Game& game)
     :   StateBase   (game),
         m_TestMenu  (game.getWindow(), 50),
@@ -41,7 +39,6 @@ StatePlaying::StatePlaying(Game& game)
 void StatePlaying::handleEvent(sf::Event e)
 {
     m_TestMenu.handleEvent(e, m_pGame->getWindow());
-
     txt.handleEvent(e, m_pGame->getWindow());
 }
 

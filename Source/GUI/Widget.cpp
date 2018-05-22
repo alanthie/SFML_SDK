@@ -2,7 +2,7 @@
 
 namespace gui {
 
-//Text
+// Text
 Widget::Text::Text()
 {
     setCharacterSize (25);
@@ -19,8 +19,10 @@ bool Widget::Rectangle::isRolledOn(const sf::RenderWindow& window) const
 
 bool Widget::Rectangle::isClicked  (sf::Event e, const sf::RenderWindow& window)
 {
-    if(isRolledOn(window)) {
-        if (e.type == sf::Event::MouseButtonPressed) {
+    if(isRolledOn(window)) 
+    {
+        if (e.type == sf::Event::MouseButtonPressed) 
+        {
             return e.mouseButton.button == sf::Mouse::Left;
         }
     }

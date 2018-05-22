@@ -1,7 +1,6 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
-
 #include "../Util/NonCopyable.h"
 
 class Game;
@@ -9,8 +8,7 @@ class Game;
 class StateBase : public NonCopyable
 {
     public:
-        StateBase(Game& game)
-            : m_pGame(&game)
+        StateBase(Game& game) : m_pGame(&game)
         {}
 
         virtual ~StateBase() = default;
